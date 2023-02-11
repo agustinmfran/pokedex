@@ -1,22 +1,20 @@
-import NavBar from "./NavBar";
-import "./Header.css";
+import Dropdown from "./Dropdown";
+import Searchbar from "./Searchbar";
+import Logo from "./Logo";
 
 function Header() {
   return (
-    <header className="container">
-      <div className="searchbar-container">
-        <div className="icon-container">
-          <img src={"/pokeball.svg"} alt="pokeball" className="icon" />
+    <header className="lg:row-span-3 bg-red-500 sticky top-0 border-solid border-black border-y-2">
+      <div className="flex flex-row h-20">
+        <div className="w-full h-full inline-flex justify-center items-center">
+          <Searchbar />
         </div>
-        <div className="searchbar-container-box">
-          <input type="search" placeholder=" . . ." className="searchbar" />
+        <div className="w-full h-full flex justify-center items-center">
+          <Logo />
         </div>
-      </div>
-      <div className="logo-container">
-        <img src={"/logo.png"} alt="Logo" id="logo" />
-      </div>
-      <div className="navbar-container">
-        <NavBar />
+        <div className="w-full h-full flex justify-center items-center">
+          <Dropdown />
+        </div>
       </div>
     </header>
   );
