@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="bg-orange-100 grid grid-cols-1 grid-rows-12">
+    <div className="bg-orange-100 grid grid-cols-1 grid-rows-12 ">
       <Header />
       <Main />
       <Footer />

@@ -1,6 +1,6 @@
 function Searchbar() {
   return (
-    <>
+    <div className="inline-flex">
       <img
         src={"/pokeball.svg"}
         alt="pokeball"
@@ -11,7 +11,7 @@ function Searchbar() {
         type="search"
         placeholder=" . . ."
       />
-    </>
+    </div>
   );
 }
 
