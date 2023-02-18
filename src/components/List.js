@@ -3,6 +3,7 @@ import Card from "./Card";
 
 function List() {
   const [pokemonList, SetPokemonList] = useState([]);
+  console.log({ pokemonList });
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
@@ -12,7 +13,7 @@ function List() {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-4 m-4">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4 m-4">
       {pokemonList.map((pokemon, index) => {
         const pokemonDetail = pokemon.url;
         return (

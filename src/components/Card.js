@@ -43,7 +43,8 @@ function Card({ pokemonDetail }) {
           <div className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
             {!isNaN(pokemon.id)
               ? pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
-              : ""}
+              : ""}{" "}
+            #{pokemon.id}
           </div>
           <div className="mb-3 text-gray-700 dark:text-gray-400">
             <div className="font-extrabold">
