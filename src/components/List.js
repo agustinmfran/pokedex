@@ -3,7 +3,6 @@ import Card from "./Card";
 
 function List() {
   const [pokemonList, SetPokemonList] = useState([]);
-  console.log({ pokemonList });
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
