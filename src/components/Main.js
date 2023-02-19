@@ -22,8 +22,9 @@ function Main() {
             <Formik
               initialValues={{ search: "" }}
               onSubmit={async (e) => {
+                const lowerCase = e.search.toLowerCase();
                 const response = await fetch(
-                  `https://pokeapi.co/api/v2/pokemon/${e.search}`
+                  `https://pokeapi.co/api/v2/pokemon/${lowerCase}`
                 );
                 if (response.ok) {
                   const data = await response.json();
@@ -54,7 +55,7 @@ function Main() {
     );
   } else
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen w-screen">
         <Card pokemonDetail={pokemonDetail} />
       </div>
     );
