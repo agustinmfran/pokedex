@@ -1,31 +1,49 @@
-function Footer() {
+import React from "react";
+import { Link } from "react-scroll/modules";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+
+const Footer = () => {
   return (
-    <footer className="inline-flex mb-0 justify-center items-center bg-red-500 border-solid border-black border-t-2">
-      <div>
-        <div className="text-center">
-          Pokédex by Agustín Franco © {new Date().getFullYear()} | Made in
-          ReactJS & Tailwind CSS
-        </div>
-        <div className="flex justify-center items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 inline"
+    <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
+      <hr className="w-full h-0.5 mx-auto mt-8 bg-black border-0"></hr>
+      <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
+        <div className="flex flex-row items-center justify-center space-x-1 text-black">
+          <Link
+            to="home"
+            className="hover:underline cursor-pointer"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+            © 2023 Agustín Franco
+          </Link>
+        </div>
+        <div className="flex flex-row items-center justify-center space-x-2 mb-1 md:ml-8">
+          <a
+            href="https://github.com/agustinmfran"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineGithub
+              className="hover:-translate-y-1 transition-transform cursor-pointer text-black "
+              size={30}
             />
-          </svg>
-          <a href="mailto:agustinmfran@gmail.com">agustinmfran@gmail.com</a>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/agustinmfran/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineLinkedin
+              className="hover:-translate-y-1 transition-transform cursor-pointer text-black "
+              size={30}
+            />
+          </a>
         </div>
       </div>
     </footer>
   );
-}
-
+};
 export default Footer;

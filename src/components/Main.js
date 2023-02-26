@@ -11,7 +11,7 @@ function Main() {
 
   if (!search) {
     return (
-      <main className="row-span-6 pt-4">
+      <main id="home" className="row-span-6 pt-4">
         <div className="flex flex-col justify-center items-center">
           <div className="inline-flex">
             <img
@@ -55,8 +55,14 @@ function Main() {
     );
   } else
     return (
-      <div className="flex justify-center items-center h-screen w-screen">
+      <div className="flex flex-col items-center justify-center mt-32 mb-32">
         <Card pokemonDetail={pokemonDetail} />
+
+        <a href="/">
+          <button className="flex w-16 h-8 justify-center items-center mt-4 rounded-md border-2 border-black bg-red-100 px-4 py-2 text-sm font-bold text-gray-700 shadow-sm hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+            Home
+          </button>
+        </a>
       </div>
     );
 }
